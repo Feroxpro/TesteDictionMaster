@@ -8,11 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var screen: HomeViewScreen?
+    
+    override func loadView() {
+        screen = HomeViewScreen()
+        view = screen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .black
     }
 }
 
