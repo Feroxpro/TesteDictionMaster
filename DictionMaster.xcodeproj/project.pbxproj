@@ -20,6 +20,7 @@
 		B430D54F2B730D96002452C0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B430D54E2B730D96002452C0 /* BaseView.swift */; };
 		B430D5552B730E75002452C0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B430D5542B730E75002452C0 /* SnapKit */; };
 		B430D5572B7325AC002452C0 /* ColorHEX+Entensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B430D5562B7325AC002452C0 /* ColorHEX+Entensions.swift */; };
+		B430D5592B749885002452C0 /* LanguagesItemsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B430D5582B749885002452C0 /* LanguagesItemsMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B430D54C2B730C5A002452C0 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		B430D54E2B730D96002452C0 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B430D5562B7325AC002452C0 /* ColorHEX+Entensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorHEX+Entensions.swift"; sourceTree = "<group>"; };
+		B430D5582B749885002452C0 /* LanguagesItemsMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesItemsMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 		B430D5492B730BC0002452C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B430D5582B749885002452C0 /* LanguagesItemsMock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				B430D5572B7325AC002452C0 /* ColorHEX+Entensions.swift in Sources */,
 				B430D54D2B730C5A002452C0 /* HomeViewScreen.swift in Sources */,
 				B430D54F2B730D96002452C0 /* BaseView.swift in Sources */,
+				B430D5592B749885002452C0 /* LanguagesItemsMock.swift in Sources */,
 				B430D5112B71B3A3002452C0 /* AppDelegate.swift in Sources */,
 				B430D5132B71B3A3002452C0 /* SceneDelegate.swift in Sources */,
 			);

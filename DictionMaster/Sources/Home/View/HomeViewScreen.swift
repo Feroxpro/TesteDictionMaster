@@ -13,7 +13,7 @@ class HomeViewScreen: BaseView {
     
     lazy var languageButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(hex: "#91A9B1", alpha: 0.1) // Opacidade de 10%
+        button.backgroundColor = UIColor(hex: "#91A9B1", alpha: 0.1)
         button.layer.cornerRadius = 20
         return button
     }()
@@ -35,10 +35,14 @@ class HomeViewScreen: BaseView {
     
     lazy var typeWordField: UITextField = {
         let textfield = UITextField()
-        textfield.placeholder = "Type a word..."
         textfield.textAlignment = .center
-        let customFont = UIFont(name: "SFProRounded", size: 32)
-        textfield.font = customFont
+        textfield.font = UIFont.systemFont(ofSize: 32)
+        let placeholderText = "Type a word..."
+        let placeholderAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor(hex: "#052D39", alpha: 0.5)        ]
+        let attributedPlaceholder = NSAttributedString(string: placeholderText,
+                                                       attributes: placeholderAttributes)
+        textfield.attributedPlaceholder = attributedPlaceholder
         return textfield
     }()
     
@@ -68,7 +72,7 @@ class HomeViewScreen: BaseView {
         typeWordField.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(269)
             make.centerX.equalToSuperview()
-            make.width.equalTo(184)
+            make.width.equalTo(204)
             make.height.equalTo(38)
         }
         
