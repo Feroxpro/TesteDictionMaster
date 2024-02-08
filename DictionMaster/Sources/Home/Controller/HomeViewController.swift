@@ -11,12 +11,11 @@ class HomeViewController: UIViewController {
     
     var homeScreen: HomeViewScreen?
     var viewModel: HomeViewModel?
+    var coordinator: MainCoordinator?
 
-    
     override func loadView() {
         homeScreen = HomeViewScreen()
         view = homeScreen
-        
     }
     
     override func viewDidLoad() {
@@ -26,8 +25,12 @@ class HomeViewController: UIViewController {
     
     func initViewModel() {
         if let homeScreen = homeScreen {
-            viewModel = HomeViewModel(homeViewController: self, homeScreen: homeScreen)
-            viewModel?.languageSelection()
+            if let coordinator = coordinator {
+                viewModel = HomeViewModel(homeViewController: self, homeScreen: homeScreen, coordinator: coordinator)
+                viewModel?.languageSelection()
+                viewModel?.updateSearchButton()
+                viewModel?.goSearchButton()
+            }
         }
     }
 }

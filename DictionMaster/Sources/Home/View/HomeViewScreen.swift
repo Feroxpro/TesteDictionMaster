@@ -52,6 +52,7 @@ class HomeViewScreen: BaseView {
         button.layer.cornerRadius = 15
         button.backgroundColor = UIColor(hex: "#5BD6FD")
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.isHidden = true
         return button
     }()
     

@@ -10,18 +10,19 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+      var coordinator: MainCoordinator?
 
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
+      func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let safeWindow = UIWindow(windowScene: windowScene)
-        safeWindow.frame = UIScreen.main.bounds
-        safeWindow.rootViewController = HomeViewController()
-        safeWindow.makeKeyAndVisible()
-        safeWindow.backgroundColor = .white
-        window = safeWindow
-    }
+        window = UIWindow(windowScene: windowScene)
+          
+          let nav = UINavigationController()
+          coordinator = MainCoordinator(navigationController: nav)
+          coordinator?.start()
+          window?.rootViewController = nav
+          window?.makeKeyAndVisible()
+          window?.backgroundColor = .white
+      }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
