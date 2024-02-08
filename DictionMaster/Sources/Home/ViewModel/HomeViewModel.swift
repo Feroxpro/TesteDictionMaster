@@ -55,10 +55,13 @@ class HomeViewModel {
             switch selectedLanguage {
             case "ENGLISH":
                 homeScreen?.typeWordField.placeholder = "Type a word..."
+                homeScreen?.searchButton.setTitle("SEARCH", for: .normal)
             case "FRANÇAIS":
                 homeScreen?.typeWordField.placeholder = "tape un mot..."
+                homeScreen?.searchButton.setTitle("RECHERCHE", for: .normal)
             case "ESPAÑOL":
                 homeScreen?.typeWordField.placeholder = "escribe una palabra..."
+                homeScreen?.searchButton.setTitle("BUSCAR", for: .normal)
             default: break
             }
         }

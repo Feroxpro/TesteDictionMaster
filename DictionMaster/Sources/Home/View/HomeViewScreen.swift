@@ -46,12 +46,22 @@ class HomeViewScreen: BaseView {
         return textfield
     }()
     
+    lazy var searchButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("SEARCH", for: .normal)
+        button.layer.cornerRadius = 15
+        button.backgroundColor = UIColor(hex: "#5BD6FD")
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        return button
+    }()
+    
     
     override func addSubviews() {
         addSubview(languageButton)
         languageButton.addSubview(iconLanguage)
         languageButton.addSubview(buttonTitle)
         addSubview(typeWordField)
+        addSubview(searchButton)
     }
     
     override func setupConstrainst() {
@@ -75,6 +85,11 @@ class HomeViewScreen: BaseView {
             make.width.equalTo(204)
             make.height.equalTo(38)
         }
-        
+        searchButton.snp.makeConstraints { make in
+            make.top.equalTo(typeWordField.snp.bottom).offset(128)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(358)
+            make.height.equalTo(64)
+        }
     }
 }
