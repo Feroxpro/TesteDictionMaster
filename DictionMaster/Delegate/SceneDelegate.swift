@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let safeWindow = UIWindow(windowScene: windowScene)
         safeWindow.frame = UIScreen.main.bounds
-        safeWindow.rootViewController = ViewController()
+        safeWindow.rootViewController = HomeViewController()
         safeWindow.makeKeyAndVisible()
         safeWindow.backgroundColor = .white
         window = safeWindow

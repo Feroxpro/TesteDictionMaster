@@ -49,8 +49,8 @@ class HomeViewScreen: BaseView {
     
     override func addSubviews() {
         addSubview(languageButton)
-        languageButton.addSubview(buttonTitle)
         languageButton.addSubview(iconLanguage)
+        languageButton.addSubview(buttonTitle)
         addSubview(typeWordField)
     }
     
@@ -61,13 +61,13 @@ class HomeViewScreen: BaseView {
             make.width.equalTo(137)
             make.height.equalTo(40)
         }
-        buttonTitle.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.trailing.equalTo(languageButton.snp.trailing).inset(15)
-        }
         iconLanguage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalTo(languageButton.snp.leading).inset(15)
+        }
+        buttonTitle.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalTo(iconLanguage.snp.trailing).offset(5)
         }
         typeWordField.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(269)

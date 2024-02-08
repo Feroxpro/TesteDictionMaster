@@ -20,8 +20,8 @@ class ItemsMock {
     func loadItems(completion: @escaping ([Item]) -> Void) {
         let items = [
             Item(name: "ENGLISH",  image: "English"),
-            Item(name: "FRANÇAIS",  image: "newspaper"),
-            Item(name: "ESPAÑOL",    image: "folder"),
+            Item(name: "FRANÇAIS",  image: "Français"),
+            Item(name: "ESPAÑOL",    image: "Español"),
 
         ]
         completion(items)
