@@ -16,6 +16,7 @@ class RestManager {
             switch response.result {
             case .success(let words):
                 completion(.success(words))
+                print(words)
             case .failure(let error):
                 completion(.failure(error))
             }

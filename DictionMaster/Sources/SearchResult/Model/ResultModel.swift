@@ -11,19 +11,11 @@ struct Word: Codable {
     let phonetics: [PhoneticInfo]?
     let origin: String?
     let meanings: [Meaning]?
-
-    private enum CodingKeys: String, CodingKey {
-        case word, phonetic, phonetics, origin, meanings
-    }
 }
 
 struct PhoneticInfo: Codable {
     let text: String?
     let audio: String?
-
-    private enum CodingKeys: String, CodingKey {
-        case text, audio
-    }
 }
 
 struct Meaning: Codable {
@@ -41,9 +33,5 @@ struct Definition: Codable {
     let example: String?
     let synonyms: [String]?
     let antonyms: [String]?
-
-    private enum CodingKeys: String, CodingKey {
-        case definition, example, synonyms, antonyms
-    }
 }
 
